@@ -2513,7 +2513,7 @@ $config = [
 
 		// https://www.shadowserver.org/what-we-do/network-reporting/netcore-netis-router-vulnerability-scan-report/
         'scan_netis_router' => [
-            'class'     => 'OPEN_NETIS_ROUTER',
+            'class'     => 'NETCORE_NETIS_ROUTER_VULNERABILITY_SCAN_REPORT',
             'type'      => 'INFO',
             'enabled'   => true,
             'fields'    => [
@@ -4948,16 +4948,27 @@ $config = [
             'class'     => 'NETCORE_NETIS_ROUTER_VULNERABILITY_SCAN_REPORT',
             'type'      => 'INFO',
             'enabled'   =>  true,
-            'fields'    =>  [
-                'timestamp',
+            'fields'    => [
                 'ip',
+                'timestamp',
+                'protocol',
                 'port',
+                'hostname',
             ],
-            'filters'   =>[
+            'filters'   => [
                 'asn',
                 'geo',
                 'region',
                 'city',
+                'naics',
+                'sic',
+                'tag',
+                'hostname_source',
+                'sector',
+                'severity',
+                 'response',
+                 'response_size',
+                 'amplification',
             ],
         ],
     
